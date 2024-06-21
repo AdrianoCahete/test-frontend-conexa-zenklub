@@ -13,11 +13,21 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "api:dev": "npx json-server --watch ./api_db.json --port 3000"
+    "api:dev": "npx json-server --watch ./mock_api/api_db.json --port 3001"
   },
   "dependencies": {
     "nuxt": "^3.12.2",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
+  },
+  "devDependencies": {
+    "@nuxt/test-utils": "^3.13.1",
+    "@playwright/test": "^1.44.1",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^14.12.3",
+    "playwright-core": "^1.44.1",
+    "sass": "^1.77.6",
+    "stylelint": "^16.6.1",
+    "vitest": "^1.6.0"
   }
 }
