@@ -1,0 +1,104 @@
+{
+  "professional": [
+    {
+      "id": 1,
+      "name": "James Doe",
+      "photo": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "specialization": "psychologist",
+      "place": "lisbon",
+      "stars": 5,
+      "reviews": 20,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 160,
+      "price_minutes": 50,
+      "currency": "brl",
+      "sessions": [
+        {
+          "id": 1,
+          "date": "2022-12-12",
+          "time": "08:00",
+          "is_available": true,
+          "scheduled_to": null
+        },
+        {
+          "id": 2,
+          "date": "2022-12-12",
+          "time": "08:30",
+          "is_available": true,
+          "scheduled_to": null
+        },
+        {
+          "id": 3,
+          "date": "2022-12-12",
+          "time": "09:00",
+          "is_available": true,
+          "scheduled_to": null
+        },
+        {
+          "id": 4,
+          "date": "2022-12-12",
+          "time": "09:30",
+          "is_available": true,
+          "scheduled_to": null
+        },
+        {
+          "id": 5,
+          "date": "2022-12-12",
+          "time": "10:00",
+          "is_available": true,
+          "scheduled_to": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Complete Name 2",
+      "photo": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "specialization": "psychologist",
+      "place": "rio de janeiro",
+      "stars": 4.5,
+      "reviews": 14,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": 120,
+      "price_minutes": 50,
+      "currency": "brl",
+      "sessions": [
+        {
+          "id": 1,
+          "date": "2022-12-11",
+          "time": "08:00",
+          "is_available": true,
+          "scheduled_to": null
+        },
+        {
+          "id": 2,
+          "date": "2022-12-11",
+          "time": "08:30",
+          "is_available": true,
+          "scheduled_to": null
+        },
+        {
+          "id": 3,
+          "date": "2022-12-11",
+          "time": "09:00",
+          "is_available": false,
+          "scheduled_to": 452
+        },
+        {
+          "id": 4,
+          "date": "2022-12-11",
+          "time": "09:30",
+          "is_available": true,
+          "scheduled_to": null
+        },
+        {
+          "id": 5,
+          "date": "2022-12-11",
+          "time": "10:00",
+          "is_available": true,
+          "scheduled_to": null
+        }
+      ]
+    }
+  ]
+}
