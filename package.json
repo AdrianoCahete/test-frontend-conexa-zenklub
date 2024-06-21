@@ -1,5 +1,10 @@
 {
-  "name": "nuxt-app",
+  "name": "conexa-zenklub-desafio-frontend",
+  "author": {
+    "name": "Adriano Cahete",
+    "email": "me@adrianocahete.dev",
+    "url": "https://adrianocahete.dev"
+  },
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,7 +12,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "api:dev": "npx json-server --watch ./api_db.json --port 3000"
   },
   "dependencies": {
     "nuxt": "^3.12.2",
