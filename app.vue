@@ -23,4 +23,10 @@
 .layout-leave-to {
   filter: blur(1rem);
 }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
 </style>
