@@ -38,8 +38,8 @@
           "id": 4,
           "date": "2022-12-12",
           "time": "09:30",
-          "is_available": true,
-          "scheduled_to": null
+          "is_available": false,
+          "scheduled_to": "777"
         },
         {
           "id": 5,
