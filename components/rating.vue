@@ -3,6 +3,7 @@
     <div v-for="i in stars" :key="i">
       <StarRating :title="i" />
     </div>
+    <div>({{ reviews }} reviews)</div>
   </div>
 </template>
 
@@ -13,6 +14,11 @@ defineProps({
   stars: {
     type: String,
     required: true,
+    default: 0,
+  },
+  reviews: {
+    type: String,
+    required: false,
     default: 0,
   },
 });

@@ -9,11 +9,15 @@ export default defineNuxtConfig({
     },
   },
 
+  fonts: {
+    families: [{ name: "Quicksand", provider: "google" }], // https://fonts.google.com/specimen/Quicksand?preview.text=Professional%20Name
+  },
+
   app: {
     layoutTransition: { name: "layout", mode: "out-in" },
   },
 
-  modules: ["@nuxt/test-utils/module", "nuxt-svgo"],
+  modules: ["@nuxt/test-utils/module", "nuxt-svgo", "@nuxt/fonts"],
   devtools: {
     enabled: true,
 

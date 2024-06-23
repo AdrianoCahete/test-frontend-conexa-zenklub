@@ -12,50 +12,54 @@
             <source media="(min-width:650px)" :srcset="data.photo" />
             <img :src="data.photo" />
           </picture>
-          <div v-else>Sem foto</div>
+          <div v-else>
+            <FemaleNoAvatar class="user-no-avatar" filled />
+          </div>
         </div>
         <div class="user-info">
-          <h1>{{ data.name }}</h1>
-          <div class="user-secondary-info">
-            <h2>{{ data.specialization }}</h2>
-            <span class="separator">|</span>
-            <h3>{{ data.place }}</h3>
-          </div>
+          <UserCard
+            :name="data.name"
+            :specialization="data.specialization"
+            :place="data.place"
+          />
           <div class="service-reviews">
-            <Rating :stars="data.stars" />
-            <div>({{ data.reviews }})</div>
+            <Rating :stars="data.stars" :reviews="data.reviews" />
           </div>
-          <div class="service-price">
-            <div>{{ getCurrency(data.currency) }}</div>
-            <div>{{ data.price }}</div>
-            <div>{{ data.price_minutes }}</div>
+          <div class="service-info">
+            <ServicePrice
+              :currency="data.currency"
+              :price="data.price"
+              :minutes="data.price_minutes"
+            />
           </div>
         </div>
       </div>
 
-      <div>{{ data.description }}</div>
+      <div class="user-description">{{ data.description }}</div>
     </section>
 
     <section class="schedule">
       Agenda
-      <div v-for="session in data.sessions" v-bind:key="data.sessions.id">
+      <div v-for="session in data.sessions" v-bind:key="data.sessions?.id">
         {{ session }}
       </div>
     </section>
   </main>
 
-  <details>
+  <details v-if="data">
     <pre>{{ data }}</pre>
   </details>
 </template>
 
 <script setup lang="ts">
+import FemaleNoAvatar from "~/assets/female_avatar.svg";
+
 const route = useRoute();
 
 interface Professional {
   id: number;
   name: string;
-  photo: string;
+  photo: string | null;
   specialization: string;
   place: string;
   stars: string;
@@ -78,38 +82,37 @@ const { data, error } = await useFetch<Professional>(
   `http://localhost:3001/professional/${id}`
 );
 
-function getCurrency(code_currency: string) {
-  switch (
-    code_currency // TODO: Move to https://www.npmjs.com/package/country-to-currency
-  ) {
-    case "BRL":
-      return "R$";
-    default:
-      return "$";
-  }
-}
-
 // const { data: count } = await useFetch("http://localhost:3001/professional/");
 </script>
 
 <style lang="scss">
-main,
+.user-profile {
+  margin-right: 1rem;
+}
+
 .user-primary-info,
 .user-secondary-info,
-.service-price,
+.service-info,
 .service-reviews {
   display: flex;
 }
 
-.user-secondary-info,
-.service-price,
+.service-info,
 .service-reviews {
   align-items: center;
 }
 
+.user-primary-info {
+  margin-bottom: 1rem;
+}
+
 .user-info {
   margin-left: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.user-description {
+  font-size: 0.9rem;
 }
 
 .user-avatar {
@@ -121,9 +124,13 @@ main,
     background-color: #eee;
     overflow: hidden;
   }
-}
 
-.separator {
-  margin: 0 0.5rem;
+  .user-no-avatar {
+    width: 150px;
+    height: 150px;
+    background-color: #eee;
+    border-radius: 50%;
+    filter: grayscale(1);
+  }
 }
 </style>

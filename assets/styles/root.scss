@@ -1,3 +1,22 @@
 :root {
-  --primaryColor: #0284ac;
+  --primaryColor: rgba(31, 109, 173, 1);
+
+  --textColor: rgba(87, 94, 97, 1);
+
+  --starColor: rgba(243, 207, 79, 1);
+
+  font-family: Quicksand;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
 }

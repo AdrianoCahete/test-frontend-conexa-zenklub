@@ -2,8 +2,8 @@
   "professional": [
     {
       "id": 1,
-      "name": "James Doe",
-      "photo": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "name": "Professional Name",
+      "photo": null,
       "specialization": "psychologist",
       "place": "lisbon",
       "stars": 5,
@@ -52,7 +52,7 @@
     },
     {
       "id": 2,
-      "name": "Complete Name 2",
+      "name": "John Doe",
       "photo": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       "specialization": "psychologist",
       "place": "rio de janeiro",
