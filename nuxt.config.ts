@@ -17,7 +17,12 @@ export default defineNuxtConfig({
     layoutTransition: { name: "layout", mode: "out-in" },
   },
 
-  modules: ["@nuxt/test-utils/module", "nuxt-svgo", "@nuxt/fonts"],
+  modules: [
+    "@nuxt/test-utils/module",
+    "nuxt-svgo",
+    "@nuxt/fonts",
+    "dayjs-nuxt",
+  ],
   devtools: {
     enabled: true,
 

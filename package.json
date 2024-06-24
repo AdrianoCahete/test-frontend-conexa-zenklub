@@ -15,7 +15,11 @@
     "postinstall": "nuxt prepare",
     "api:dev": "npx json-server --watch ./mock_api/api_db.json --port 3001",
     "prepare": "husky",
-    "test": "echo 'not implemented yet'"
+    "test": "npm run test:unit",
+    "test:unit": "vitest run",
+    "test:integration": "playwright test",
+    "test:integration:ui": "playwright test --ui",
+    "test:gen": "npx playwright codegen http://localhost:3000/"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.7.0",
@@ -28,6 +32,7 @@
     "@nuxt/test-utils": "^3.13.1",
     "@playwright/test": "^1.44.1",
     "@vue/test-utils": "^2.4.6",
+    "dayjs-nuxt": "^2.1.9",
     "happy-dom": "^14.12.3",
     "playwright-core": "^1.44.1",
     "sass": "^1.77.6",
