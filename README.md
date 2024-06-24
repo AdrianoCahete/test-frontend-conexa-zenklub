@@ -42,7 +42,7 @@ decisão que não esteja delineada neste documento
 ## Decisões
 
 - Nuxt 3 porque a Developer Experience é melhor (tem auto import de componentes, as extensões são quase sem nenhuma configuração e mais)
-- CSS Custom made pra não encher o projeto de css não utilizado
+- CSS Custom made pra não encher o projeto de css não utilizado e
 - Componentizado pensado em futuro
 - Poderia usar componentes prontos, mas foquei em criar tanto o componente quanto o css pra mostrar que sei fazer.
 
