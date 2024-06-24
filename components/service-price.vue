@@ -1,7 +1,7 @@
 <template>
   <div class="service-price">
     <div>{{ getCurrency(currency) }}</div>
-    <div>
+    <div class="service-price-value">
       <span class="service-value">{{ price }}</span> /
       <span class="service-minutes">{{ minutes }} minutes</span>
     </div>
@@ -42,5 +42,13 @@ function getCurrency(code_currency: string) {
 <style lang="scss" scoped>
 .service-price {
   display: flex;
+  font-weight: bold;
+  margin-top: 0.6rem;
+  color: var(--textColor);
+}
+
+.service-minutes {
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
 </style>

@@ -39,10 +39,7 @@
     </section>
 
     <section class="schedule">
-      Agenda
-      <div v-for="session in data.sessions" v-bind:key="data.sessions?.id">
-        {{ session }}
-      </div>
+      <Agenda :sessions="data.sessions" :place="data.place" />
     </section>
   </main>
 
@@ -85,7 +82,7 @@ const { data, error } = await useFetch<Professional>(
 // const { data: count } = await useFetch("http://localhost:3001/professional/");
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .user-profile {
   margin-right: 1rem;
 }
@@ -131,6 +128,12 @@ const { data, error } = await useFetch<Professional>(
     background-color: #eee;
     border-radius: 50%;
     filter: grayscale(1);
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+      filter: grayscale(0);
+      transition: ease-in-out 0.5s;
+    }
   }
 }
 </style>

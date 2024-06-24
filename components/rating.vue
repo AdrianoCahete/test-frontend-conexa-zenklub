@@ -1,9 +1,9 @@
 <template>
   <div class="rating">
-    <div v-for="i in stars" :key="i">
-      <StarRating :title="i" />
+    <div class="rating-scale">
+      <StarRating class="rating-value" v-for="i in stars" :key="i" :title="i" />
     </div>
-    <div>({{ reviews }} reviews)</div>
+    <div class="rating-reviews">({{ reviews }} reviews)</div>
   </div>
 </template>
 
@@ -25,7 +25,19 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-.rating {
+.rating,
+.rating-scale {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-scale {
+  color: var(--starColor);
+}
+
+.rating-reviews {
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
 }
 </style>
