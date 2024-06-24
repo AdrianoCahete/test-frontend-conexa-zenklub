@@ -42,10 +42,6 @@
       <Agenda :sessions="data.sessions" :place="data.place" />
     </section>
   </main>
-
-  <details v-if="data">
-    <pre>{{ data }}</pre>
-  </details>
 </template>
 
 <script setup lang="ts">
