@@ -84,6 +84,8 @@ defineProps({
   justify-content: space-between;
   width: 100%;
   color: var(--textSecondaryColor);
+  margin-bottom: 1rem;
+  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .agenda-date,
@@ -108,15 +110,15 @@ defineProps({
 
   .is-rounded,
   .is-disabled {
-    background: var(--grayLighterColor);
+    background: var(--grayDarkColor);
     padding: 5px;
     border-radius: 50%;
+    color: #fff;
   }
 
   .is-disabled {
     background: var(--grayLighterColor);
     cursor: not-allowed;
-    color: #fff;
   }
 }
 
@@ -135,6 +137,8 @@ defineProps({
   grid-template-rows: repeat(5, 1fr);
   margin: 0 5px;
   justify-content: center;
+  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 1rem 0 0.6rem;
 }
 
 .agenda-hour-item {
